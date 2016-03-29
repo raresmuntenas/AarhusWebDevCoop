@@ -1,0 +1,17 @@
+﻿@inherits Umbraco.Web.Macros.PartialViewMacroPage
+	<h4 class="well well-lg">Here you can see a list with lastest 3 completed projects </h4>
+
+
+@{
+	var selection = CurrentPage.Site().FirstChild("projectMain").Children("projectItem").Where("Visible && projectStatus.Contains(\"9\")","sas");
+}
+<ul class="list-group">
+	@foreach(var item in selection.Take(3)){
+		<li class="list-group-item">
+			<a href="@item.Url">@item.Name</a>
+		</li>
+	}
+
+
+
+</ul>

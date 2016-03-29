@@ -1,0 +1,7 @@
+﻿@inherits Umbraco.Web.Macros.PartialViewMacroPage
+<h3>Status of the project</h3>
+	@if(@CurrentPage.projectStatus == 9){<h4>Completed</h4>}
+	@if(@CurrentPage.projectStatus == 8){<h4>Under Development</h4>}
+	@if(@CurrentPage.projectStatus == 7){<h4>Initiated</h4>}
+	@if(@CurrentPage.projectStatus == 6){<h4>Idea</h4>}
+	
